@@ -5,20 +5,20 @@
 class Tw < Formula
   desc "'tw' is a very basic Twitter client to query your Likes, and do some powerful JSON filtering."
   homepage "https://github.com/embano1/tw"
-  version "1.1.1"
+  version "1.2.0"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/embano1/tw/releases/download/v1.1.1/tw_Darwin_arm64.tar.gz"
-      sha256 "a5cb2f2dcdb0fd590d4c890a29fa0b7b669436118650f52cb1022dbf37d5fdde"
+      url "https://github.com/embano1/tw/releases/download/v1.2.0/tw_Darwin_arm64.tar.gz"
+      sha256 "52e48455b8b61c01c742a85019ba6b945511c49f4c1ac649511b3414c02d33b8"
 
       def install
         bin.install "tw"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/embano1/tw/releases/download/v1.1.1/tw_Darwin_x86_64.tar.gz"
-      sha256 "6e9c2abf22b65e44dcbcf36a83cbdfca2b71841bb7e2dc734f54a48803410028"
+      url "https://github.com/embano1/tw/releases/download/v1.2.0/tw_Darwin_x86_64.tar.gz"
+      sha256 "251cd209c3ee4824669ea06e1c3f800748c696a1acf371ba12b5991cb83c3f30"
 
       def install
         bin.install "tw"
@@ -27,25 +27,17 @@ class Tw < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/embano1/tw/releases/download/v1.1.1/tw_Linux_armv6.tar.gz"
-      sha256 "a0503d76158c2ec805d67fda34c8565ae7d6ef72cb13c49204db38adb2a68a75"
-
-      def install
-        bin.install "tw"
-      end
-    end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/embano1/tw/releases/download/v1.1.1/tw_Linux_arm64.tar.gz"
-      sha256 "9fd70a158c952aa7b841a78084f13a09d7d0a97d14a1c55df6ea6b8565721683"
+      url "https://github.com/embano1/tw/releases/download/v1.2.0/tw_Linux_arm64.tar.gz"
+      sha256 "cfad99d66264e2e494c33e45188a1b3d7d06df9fa95bd43dacd1455c8585aeb0"
 
       def install
         bin.install "tw"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/embano1/tw/releases/download/v1.1.1/tw_Linux_x86_64.tar.gz"
-      sha256 "90956bc533ad4b63edf05a7887f04966734e8903cee1cb2853cba6e603ccfd96"
+      url "https://github.com/embano1/tw/releases/download/v1.2.0/tw_Linux_x86_64.tar.gz"
+      sha256 "4c8ecbd449b0e2a4293d8aaa44174395cd64d6a8cc65f196a199eb85f66627a4"
 
       def install
         bin.install "tw"
