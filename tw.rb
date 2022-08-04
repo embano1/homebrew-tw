@@ -5,20 +5,20 @@
 class Tw < Formula
   desc "'tw' is a very basic Twitter client to query your Likes, and do some powerful JSON filtering."
   homepage "https://github.com/embano1/tw"
-  version "1.2.0"
+  version "1.2.1"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/embano1/tw/releases/download/v1.2.0/tw_Darwin_x86_64.tar.gz"
-      sha256 "169c8e69d9300e00fafb2d6a869dc369d02d9398d45198ad5ae75df0d46b063a"
+      url "https://github.com/embano1/tw/releases/download/v1.2.1/tw_Darwin_x86_64.tar.gz"
+      sha256 "c740328db8873b445c1a42d2df9a7fb8a1883cf26c38b42258af5b32b5ce571e"
 
       def install
         bin.install "tw"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/embano1/tw/releases/download/v1.2.0/tw_Darwin_arm64.tar.gz"
-      sha256 "aa9f225b3d351815dbb850f6888a9311f7d766f830b53acbed1b0fa4b619187a"
+      url "https://github.com/embano1/tw/releases/download/v1.2.1/tw_Darwin_arm64.tar.gz"
+      sha256 "6c4832ac9c1d93bc68ea53584f2dd955946c5b5652bc085388fbf45039eedf85"
 
       def install
         bin.install "tw"
@@ -28,16 +28,16 @@ class Tw < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/embano1/tw/releases/download/v1.2.0/tw_Linux_arm64.tar.gz"
-      sha256 "b4748dc3beade5b092ad1031e91d2264ad000d00fdb784ce531492e562cb4c85"
+      url "https://github.com/embano1/tw/releases/download/v1.2.1/tw_Linux_arm64.tar.gz"
+      sha256 "f3dd83c3faf9005265cb7fa1b784073be0fd19438d4b234466d96d7939842728"
 
       def install
         bin.install "tw"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/embano1/tw/releases/download/v1.2.0/tw_Linux_x86_64.tar.gz"
-      sha256 "94d95a0bfd7bb3280f2f847d177c581b2dd0fd0263724bfc3d1e1f3029888984"
+      url "https://github.com/embano1/tw/releases/download/v1.2.1/tw_Linux_x86_64.tar.gz"
+      sha256 "d3636c7bc862de0b2684e555283f1e488f4e444fac2c65a5187f70361a5d111f"
 
       def install
         bin.install "tw"
