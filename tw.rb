@@ -5,20 +5,20 @@
 class Tw < Formula
   desc "'tw' is a very basic Twitter client to query your Likes, and do some powerful JSON filtering."
   homepage "https://github.com/embano1/tw"
-  version "1.2.1"
+  version "1.2.2"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/embano1/tw/releases/download/v1.2.1/tw_Darwin_x86_64.tar.gz"
-      sha256 "c740328db8873b445c1a42d2df9a7fb8a1883cf26c38b42258af5b32b5ce571e"
+    if Hardware::CPU.arm?
+      url "https://github.com/embano1/tw/releases/download/v1.2.2/tw_darwin_arm64.tar.gz"
+      sha256 "c3303d26ae25642e213f92b9d533e5b88772afe02a82db3ceb3aa3018fbfcaed"
 
       def install
         bin.install "tw"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/embano1/tw/releases/download/v1.2.1/tw_Darwin_arm64.tar.gz"
-      sha256 "6c4832ac9c1d93bc68ea53584f2dd955946c5b5652bc085388fbf45039eedf85"
+    if Hardware::CPU.intel?
+      url "https://github.com/embano1/tw/releases/download/v1.2.2/tw_darwin_amd64.tar.gz"
+      sha256 "0c740f1f5cc2775df2c1d623b7252716dd428d79e93328a3d2534f7dcd9d386e"
 
       def install
         bin.install "tw"
@@ -28,16 +28,16 @@ class Tw < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/embano1/tw/releases/download/v1.2.1/tw_Linux_arm64.tar.gz"
-      sha256 "f3dd83c3faf9005265cb7fa1b784073be0fd19438d4b234466d96d7939842728"
+      url "https://github.com/embano1/tw/releases/download/v1.2.2/tw_linux_arm64.tar.gz"
+      sha256 "00183b2b2e306f381da12c37ba0103dd0422b051e826ce037378230488fb3203"
 
       def install
         bin.install "tw"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/embano1/tw/releases/download/v1.2.1/tw_Linux_x86_64.tar.gz"
-      sha256 "d3636c7bc862de0b2684e555283f1e488f4e444fac2c65a5187f70361a5d111f"
+      url "https://github.com/embano1/tw/releases/download/v1.2.2/tw_linux_amd64.tar.gz"
+      sha256 "8d4aef3e720f15a1cb84684a1f0e691535631799f4902c912cbc06242d07858a"
 
       def install
         bin.install "tw"
