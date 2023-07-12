@@ -5,20 +5,20 @@
 class Tw < Formula
   desc "'tw' is a very basic Twitter client to query your Likes, and do some powerful JSON filtering."
   homepage "https://github.com/embano1/tw"
-  version "1.2.2"
+  version "1.2.3"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/embano1/tw/releases/download/v1.2.2/tw_darwin_arm64.tar.gz"
-      sha256 "c3303d26ae25642e213f92b9d533e5b88772afe02a82db3ceb3aa3018fbfcaed"
+      url "https://github.com/embano1/tw/releases/download/v1.2.3/tw_darwin_arm64.tar.gz"
+      sha256 "122641e25fb044a4e717530bdedc827cb929d83cc2cc8ac179168e78c8c7c311"
 
       def install
         bin.install "tw"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/embano1/tw/releases/download/v1.2.2/tw_darwin_amd64.tar.gz"
-      sha256 "0c740f1f5cc2775df2c1d623b7252716dd428d79e93328a3d2534f7dcd9d386e"
+      url "https://github.com/embano1/tw/releases/download/v1.2.3/tw_darwin_amd64.tar.gz"
+      sha256 "45ebdf30b930b3706c631910ca0853ce515737407188499ed905b895730977b8"
 
       def install
         bin.install "tw"
@@ -27,17 +27,17 @@ class Tw < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/embano1/tw/releases/download/v1.2.2/tw_linux_arm64.tar.gz"
-      sha256 "00183b2b2e306f381da12c37ba0103dd0422b051e826ce037378230488fb3203"
+    if Hardware::CPU.intel?
+      url "https://github.com/embano1/tw/releases/download/v1.2.3/tw_linux_amd64.tar.gz"
+      sha256 "9e3d63e7b40b1700dc2ea7ac550d0747a09fe5a58bd25b7c8b91d7de575d2d8e"
 
       def install
         bin.install "tw"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/embano1/tw/releases/download/v1.2.2/tw_linux_amd64.tar.gz"
-      sha256 "8d4aef3e720f15a1cb84684a1f0e691535631799f4902c912cbc06242d07858a"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/embano1/tw/releases/download/v1.2.3/tw_linux_arm64.tar.gz"
+      sha256 "3befac63f2cdfdaf89eb191440849c80b1b5345a552395bae44d3461059d8129"
 
       def install
         bin.install "tw"
